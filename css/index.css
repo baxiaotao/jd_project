@@ -1,0 +1,303 @@
+
+/*# sourceMappingURL=index.css.map */
+/*这里是中间分类模块 - start*/
+ul{
+	padding:0; 
+	margin: 0;
+}
+.grid{
+	height: 480px;
+	
+}
+
+.grid .grid-col1{		/*这里设置的是中间分类模块中的最左边的模块*/
+	width:190px;
+	height: 100%;
+	background-color: #6e6568;
+	color:#fff;
+	font-size: 14px;
+	position:relative;
+
+}
+.grid-col1 .ad{
+	width:250px;
+	height: 480px;
+	
+	position:absolute;
+	left:-250px;
+	top:0;
+
+}
+
+.grid-col1 .ad-r{
+	position: absolute;
+	left: 250px;
+	height:480px;
+	top: 0;
+	z-index: 999;       /*这句话的意思是让这个图片置于最上面*/
+	width:0px;			/*在这里设置图片的初始宽度为0，等下面鼠标经过的时候在让图片回归原始宽度*/
+	transition: all 0.8s;   /*这里给大图片设置过度动画*/
+
+}
+.ad:hover .ad-r{
+	width:990px;		/*当鼠标经过类名为ad的大盒子div时，就让图片的宽度变为990px*/
+}
+.grid-col1 a{
+	color:#fff;
+	margin:0 3px;
+
+}
+.grid-col1 ul{
+	padding:20px 0;		/*上下内边距是20px 左右的内边距是0*/
+}
+.grid-col1 li{
+	padding-left:13px;
+	height: 26px;
+	line-height: 26px;
+}
+.grid-col1 a:hover{
+	color: #f74915;
+}
+.grid-col1 li:hover{
+	background-color: #eaeaea;     /*这是li标签添加上滑过时的背景色，每当鼠标滑过这些li标签时就会显示出这种颜色*/
+}
+.grid .grid-col2{
+	width: 790px;
+	height: 100%;
+	
+	margin-left: 10px;
+}
+
+.grid .grid-col3{
+	width:190px;
+	height: 100%;
+
+}
+/*这里是中见分类模块 - end*/
+/*从这里开始写中间banner部分*/
+.grid-col2-t{
+	position: relative;
+}
+.arrow-l,.arrow-r{
+	position: absolute;
+	width:30px;
+	height: 60px;   		/*这里要切记，a明明是行内元素，我为什么没有转化成块级元素就直接给宽高了呢，因为这里使用了浮动，行内元素如果被设置了绝对定位或者固定定位或者浮动，那么就可以直接给宽高*/
+	background-color: rgba(0,0,0,.3);    /*这里设置的rgba是颜色的效果，前三个值是颜色的种类：0，0，0是值黑色，后面一个值是透明度，不透明是1*/
+	top: 50%;
+	transform:translateY(-50%);    /*这里是将这个元素移动到父盒子的沿Y轴的中间位置*/
+	line-height: 60px;
+	color: rgba(255,255,255,.5);     /*这里设置的rgba是颜色的效果，前三个值是颜色的种类：255，255，255是白色，后面一个值是透明度，不透明是1*/
+	font-size:16px;
+	text-align: center;
+}
+.grid-col2-t .arrow-r{
+	right: 0;        /*因为设置了绝对定位，这里给right：0，这样这个右箭头就跑到右边了*/
+}
+.grid-col2-b div
+{
+	float:left;
+	margin-top: 10px;
+}
+.grid-col2-b div:last-child
+{
+	float:right;
+}
+ .circle{
+	width:180px;
+	height: 20px;
+	padding:0 0 0 7px !important;
+	background-color: rgba(255,255,255,.6);
+	border-radius: 10px;
+	position: absolute;
+	left: 50%;
+	bottom:20px;
+	transform: translateX(-50%);
+}
+.circle li{
+	width:14px;
+	height: 14px;
+	background-color: #fff;
+	border-radius: 50%;
+	float: left;
+	margin:2.5px 3.8px;
+	cursor: pointer;
+
+}
+.circle .current{
+	background-color: #f10215;
+}
+/*登录模块*/
+.login{
+	height:115px;
+	background-color: #fff;
+	border-bottom:1px solid #ccc;
+	padding:10px;
+	box-sizing: border-box;
+}
+/*登录模块的上半部分*/
+.login-t{
+	width:95px;
+	height: 60px;
+	white-space: nowrap;    /*这条语句的意思是不让元素换行,*/
+	overflow: hidden;        /*这条语句的意思是超出容器的部分隐藏*/
+	text-overflow: ellipsis;	/*这条语句的意思是超出容器的部分用省略号代替*/
+	color:#666;
+	font-size: 13px;
+	line-height: 20px;
+	padding-left: 60px;
+	position:relative;
+
+}
+.login-t a{
+	color:#666;
+}
+.login-t a:hover{
+	color: #f10215;       /*鼠标滑过时候，让a链接变色*/
+}
+.login-t .user-info{
+	width:50px;
+	height: 50px;
+	position:absolute;  
+	left: 0;
+	top:0; 
+	    /*超出部分隐藏*/
+	background: url(../images/sprite_userinfo@1x.png) no-repeat -70px 0;
+}
+.user-info img{
+	
+	/*width:100%;*/			/*因为原图片的大小是100*100像素，而我们需要的是50*50，而这张图片外面的容器的大小就是50*50，这样图片设置为100%就能自适应外面的容器了*/
+	width:40px;
+	border-radius: 50%;
+	margin: 5px 0 0 5px;
+
+}
+.login-b a{
+	display: inline-block;
+	width:70px;
+	height: 20px;
+	line-height: 20px;    /*垂直居中显示*/
+	border:2px solid #f10215;
+	font-size:13px;
+	text-align: center;    /*水平居中显示*/
+	margin-right: 3px;
+}
+.login-b a:hover{
+	background-color: #f10215;
+	color: #fff;
+}
+/*消息模块*/
+.new{
+	height:154px;
+	background-color: #fff;
+	border-bottom:1px solid #ccc;
+	padding:10px 15px 0;
+	box-sizing: border-box;
+	font-size:14px;
+
+}
+.news-t  {
+	border-bottom:1px solid #ccc;
+	padding-bottom: 10px;
+	position: relative;
+	
+}
+.new .news-t a{
+	color: #333;
+} 
+.news-t .cuxiao{
+	display: inline-block;
+	width: 35px;
+	height: 15px;
+	border-right: 1px solid #ccc;
+	margin-right: 16px;
+}
+.new .more{
+	float: right;
+}
+.news-t div{
+	width:28px;
+	height: 2px;
+	background-color: #f10215;
+	position: absolute;
+	left: 0;
+	bottom:-1px;
+}
+.news-b{
+	padding-top: 15px;
+	box-sizing: border-box;
+}
+.news-b ul{
+	padding:0; !important;
+}
+.news-b li{
+	height: 25px;
+	line-height: 25px;
+}
+
+/*拓展模块*/
+.expand{
+	height: 209px;
+	background-color:#fff;
+	overflow: hidden;
+}
+
+.expand li{
+	width: 46.75px;
+	height: 69px;
+	border-right:1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	float: left; 
+	text-align: center;
+	font-size:12px;
+}
+.expand ul{
+	width: 195px;
+}
+
+.expand li a{
+	display: block;
+	padding-top:15px;
+}
+.expand li i{
+	display: block;
+	width: 21px;
+	height: 25px;
+	background: url(../images/sprite_fs@1x.png) no-repeat;				/*这里放精灵图*/
+	margin:0 auto 10px;			/*块级元素居中对齐*/
+
+}
+.expand li:first-child i{
+	background-position: -4px -88px;
+}
+.expand li:nth-child(2) i{
+	background-position: -2px -45px;
+}
+.expand li:nth-child(3) i{
+	background-position: -46px -89px;
+}
+.expand li:nth-child(4) i{
+	background-position: -87px -5px;
+}
+.expand li:nth-child(5) i{
+	background-position: -88px -46px;
+}
+.expand li:nth-child(6) i{
+	background-position: -3px -1px;
+}
+.expand li:nth-child(7) i{
+	background-position: -44px -46px;
+}
+.expand li:nth-child(8) i{
+	background-position: -92px -88px;
+}
+.expand li:nth-child(9) i{
+	background-position: -134px -1px;
+}
+.expand li:nth-child(10) i{
+	background-position: -131px -92px;
+}
+
+.expand li:last-child i{
+	background-position: -45px -1px;
+}
+/*中间banner部分从这里结束*/

@@ -1,0 +1,369 @@
+
+/*# sourceMappingURL=base.css.map */
+body{
+	background-color: #f6f6f6;
+}
+
+/*这个是公共类样式 start*/
+.w{					/*这个是版心，宽度为1190像素 居中对齐*/
+	width:1190px;
+	margin:0 auto;
+}
+img{
+	vertical-align: top;   /*这个属性作用于img属性上是为了消除图片底部有缝隙的问题*/
+}
+.f1{
+	color:#f74915 !important;   /*京东网站里有很多字体颜色都是这个颜色*/
+}
+a:hover{
+	color:#f74915;   /*当鼠标划过a链接的时候，显示这个颜色*/
+}
+.fl{				/*这个公共类样式是左浮动*/
+	float: left;
+}
+.fr{				/*这个公共类样式是右浮动*/
+	float: right;
+}
+a{
+	text-decoration:none;
+	color:#999;
+}
+blockquote, body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, hr, input, legend, li, ol, p, pre, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+}
+button , input{    /*去掉默认的边框*/
+	border: 0;
+}
+ul{
+	list-style: none;
+}
+/*这个是公共类样式 end*/
+@font-face {                       /*字体声明*/
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?jm4go9');
+  src:  url('../fonts/icomoon.eot?jm4go9#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?jm4go9') format('truetype'),
+    url('../fonts/icomoon.woff?jm4go9') format('woff'),
+    url('../fonts/icomoon.svg?jm4go9#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+header{
+	height: 80px;
+	background-color: #020000; 
+}
+.shortcut{
+	height: 30px;
+	line-height: 30px;    /*使文字垂直居中*/
+	background-color: #ececec;
+	border-bottom: 1px solid #dddddd;
+	font-size:12px;
+	color:#999999;
+
+}
+
+.city{
+	margin-left: 200px;    /*让元素离版心的左边框为200px*/
+}
+.shortcut li{
+	float:left;
+
+}
+.shortcut i{
+	font-family: 'icomoon';     /*这里是注册这些小icon图标*/
+	font-weight: normal;
+    font-style: normal;         /*清除这些小图标的多余的样式*/
+    font-display: block;
+    color:#ccc;    /*为这些小icon图标设置颜色*/
+}
+.space{
+	width: 1px;
+	height: 10px;
+	background-color: #ccc;
+	margin:10px 12px 0;  /*设置外边距为上 10px 左右 12px 下0 */
+}
+.mobile{
+	position:relative;
+}
+.mobile img{
+	position: absolute;
+	top: 31px;
+	left:-5px;
+}
+
+/*这里是关于中间部分的样式*/
+.middle {                /*注意这里的盒子和上面相比会有空隙，这是因为h1标签默认的有内边距和外边距*/
+	height: 140px;
+	
+	position: relative;
+}
+
+.logo a{
+	display: block;
+	background:#fff url(../images/logo.png) no-repeat;   /*注意这里插入背景图片是用background而不是background-image还有url()里没有引号*/
+	width: 190px;
+	height: 170px;
+}
+.logo{
+	position: absolute;    /*这里给logo图片设置了绝对定位，目的是将logo往上移动30px，而不会影响外面的大盒子*/ 
+	top:-31px;
+	left: 0;
+	box-shadow: 0px -3px 5px rgba(0,0,0,0.5);
+	}
+	/*搜索框*/
+.form{
+	width:550px;
+	height:35px;
+
+	position: relative;
+	left:320px;
+	top:25px;
+}
+
+.form .search{
+	width:498px;
+	height: 33px;
+	border:1px solid #f74915;
+	float:left;
+}
+.form button{
+	width: 50px;
+	height: 35px;
+	background-color: #f74915;
+	float:left;
+}
+.form button i{
+	font-family: 'icomoon';     /*这里是注册这些小icon图标*/
+	font-weight: normal;
+    font-style: normal;         /*清除这些小图标的多余的样式*/
+    font-display: block;
+    color:#fff;
+}
+
+.shopCar{
+	width:188px;
+	height:33px;
+	line-height: 33px;
+	border:1px solid #eee;
+	position: absolute;
+	top:25px;
+	right:95px;
+	background-color:#fff;
+	text-align: center;
+
+
+
+}
+.shopCar i{
+	font-family: 'icomoon';     /*这里是注册这些小icon图标*/
+	font-weight: normal;
+    font-style: normal;         /*清除这些小图标的多余的样式*/
+    font-display: block;
+    color:#f74915;
+    margin-right:5px;
+}
+
+.shopCar span{      			/*设置字体上面的小红点*/
+	width:15px;
+	height:15px;
+	border-radius: 50%;    
+	background-color: #f74915;   
+	position: absolute;
+	top:3px;
+	right: 30px;
+	color: #fff;
+	line-height: 15px;
+	font-size: 12px;
+}
+.hotWords{
+	position:absolute;
+	left:320px;
+	top:68px;
+}
+.navitems{
+	width: 770px;
+	height:40px;
+	line-height: 40px;
+
+	position: absolute;
+	bottom:0;
+	left:200px;
+}
+.navitems li{
+	float: left;
+	margin-left: 30px;
+
+}
+
+.navitems li a{
+	font-size: 16px;
+	font-weight: 700px;
+	color:#555;
+}
+.navitems li a:hover{
+	color:#f74915; 
+}
+.navitems .space{
+	margin-top:15px;   
+
+}
+
+/*超级日部分*/
+.super{
+	position: absolute;
+	bottom:0;
+	right: 0;
+}
+
+/*页面底部从这里开始*/
+footer{
+	margin-top:30px;
+
+	background-color:#eaeaea;
+
+}
+
+.service{
+	border-bottom:1px solid #dedede;
+	height: 190px;
+	position: relative;
+}
+.service ul{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	position:absolute;
+	top:77px;
+
+}
+.service ul li{
+	width:297px;
+	height: 43px;
+	line-height: 43px;
+	text-align: center;
+
+	position:relative;
+
+}
+
+.service li h5{
+	width: 37px;
+	height: 43px;
+	position: absolute;
+	left:78px;
+	top:0;
+		background:url(../images/ico.png) no-repeat;
+}
+.service li p{
+	font-weight: 700;
+	margin-left: 82px;
+}
+.service li:nth-child(2) h5{
+	background-position: 0 -43px;      /*取精灵图放入 li中的h5中*/
+}
+.service li:nth-child(3) h5{
+	background-position: 0 -86px;
+}
+.service li:nth-child(4) h5{
+	background-position: 0 -129px;/* 这段话可以帮助理解box-sizing这个属性 这章讲的没有突出重点！ box-sizing 最主要的用法是规定容器元素的最终尺寸计算方式。
+如果你创造了一个 <div> 没有设置 box-sizing 属性为 border-box(不设置的话默认值为 content-box.)，同时你设置 width:100px; border:10px solid red; padding:10px; 那么最终 div 容器的实际宽度为：
+100px(width)+2*10px*(padding)+2*10px(border)=140px所以你会得到一个比你预期（100px）还要更大的容器，结果就是会破坏网页布局
+注意：容易 margin 的尺寸不会被计算入最终容器宽度，因为对他的定义为对这个容器的留白，但不属于容器本身。
+如果当我们定义一个容器的 box-sizing 属性为 border-box 时（表达式：br{box-sizing:border-box}），那么我们创建一个和上段中相同设置的 <div> 容器时，那么他的最终宽度即为 100px, 那么它的内容部分（content）的有效宽度变成了 100px-2*10px-2*10px =60px; 所以你会得到一个你预期大小的盒子容器，但是只是被压缩了内容部分尺寸而已，但是对于整体布局而言益处颇多。所以要合理利用好这个属性，这个属性十分重要。*/
+}
+
+
+/*这是下面帮助模块的代码*/
+.help{
+	height: 200px;
+	border-bottom: 1px solid #dddddd;
+	padding-top:25px;
+	box-sizing: border-box;
+
+}
+.help dl{
+	width:192px;	/*宽度剩余法*/
+	float: left;  
+}
+.help dl dt{
+	font-size:14px;
+	font-weight: 400;
+	height:30px;   /*高度剩余法*/
+}
+.help dl dd{
+	height: 30px;
+}
+.coveryage{
+	width: 198px;
+	height: 150px;
+	background:url(../images/ico_footer.png) no-repeat;
+}
+.coveryage h5{
+	font-size: 14px;
+	height: 30px;
+	text-align: center;
+	color: #666;
+}
+
+.coveryage p{
+	font-size:12px;
+	line-height: 18px;
+	width:180px;
+	color:#666666;
+	text-align: center;
+}
+.coveryage a{
+display: block;  /*切记：margin外边距属性是块级元素才用的，如果向a标签这种行内元素想用的话，就要先转化为块级元素*/
+margin-top: 5px;
+width:180px;
+text-align: right;
+}
+
+/*下面是页面最底部关于版权的模块*/
+.copyRight{
+	padding-top:20px;     /*使这个容器内的上部有一段空隙（内填充）*/
+	font-size: 12px;
+	color:#666666;
+	text-align: center;
+}
+.copyRight span{
+	display: inline-block;
+	margin: 0 10px 0;
+}
+.copyRight div{
+	padding-top:20px;
+}
+.copyRight div p{
+	line-height: 22px;
+}
+/*版权模块最下面的小图标在这里*/
+.foot-icon{
+	margin:0 auto 0;
+}
+.foot-icon a{
+	display: inline-block;
+	width:103px;
+	height: 33px;
+	background:url(../images/ico_footer.png) 0 -150px no-repeat;
+	text-align: center;
+	margin:20px 4px 0;
+}
+.foot-icon a:nth-child(2){
+	background:url(../images/ico_footer.png) -104px -151px;      /*总结精灵图一般是量图片的左上角的坐标。然后刚图片的容器和精灵图的大小一致*/
+}
+.foot-icon a:nth-child(3){
+	background:url(../images/ico_footer.png) 0 -184px;
+}
+.foot-icon a:nth-child(4){
+	background:url(../images/ico_footer.png) -105px -184px;
+}
+.foot-icon a:nth-child(5){
+	background:url(../images/ico_footer.png) 0 -217px;
+}
+.foot-icon a:nth-child(6){
+	background:url(../images/ico_footer.png) -104px -217px;
+}
